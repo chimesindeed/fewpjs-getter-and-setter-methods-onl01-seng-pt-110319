@@ -31,3 +31,4 @@ class Circle {
     this.radius = diameter / 2;
   }
 }
+circle = Circle.new(3);

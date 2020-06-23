@@ -1,34 +1,32 @@
 // Add your Circle class here
-const pi = MATH.PI
+const pi = Math.PI
 
 class Circle {
-  
-  constructor(radius) {
+  constructor( radius ) {
     this.radius = radius;
   }
-  
+
   get diameter() {
-    return this.radius * 2;
+    return this.radius * 2
   }
-  
+
+  set diameter( diameter ) {
+    this.radius = diameter / 2
+  }
+
   get circumference() {
-    return this.radius * 2 * pi;
+    return ( this.radius * 2 ) * pi
   }
-  
-  get area(){
-    return (this.radius * this.radius) * pi;
+
+  set circumference( circumference ) {
+    this.radius = circumference / ( pi * 2 )
   }
-  
-  set area(area) {
-    this.radius = Math.sqrt(area / pi);
+
+  get area() {
+    return pi * ( this.radius * this.radius )
   }
-  
-  set circumference(circumference){
-    this.radius = circumference / (pi * 2);
-  }
-  
-  set diameter(diameter){
-    this.radius = diameter / 2;
+
+  set area( area ) {
+    this.radius = Math.sqrt( area / pi )
   }
 }
-circle = Circle.new(3);
